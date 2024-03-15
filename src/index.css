@@ -1,13 +1,183 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+.hero-heading1 {
+    margin-top: -4rem;
+    font-size: 10rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hero-heading2 {
+    margin-top: -4rem;
+    font-size: 7rem;
+} */
+
+.Orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* .glowing-text {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+} */
+
+.glowing-text {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    animation: glowAnimation 5s infinite alternate;
+    animation-delay: 10s;
+    /* opacity: 0.5; */
+}
+
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    9.5% {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 1);
+    }
+
+    10% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    20% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    30% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    40% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    50% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    59% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    60% {
+        text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    }
+
+    70% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    80% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    90% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    }
+
+    90.5% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-description {
+    margin: 1rem;
+}
+
+.about-description {
+    margin: -0.5rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+    margin-bottom: 0rem
+}
+
+.hero-name-heading1 {
+    font-size: 15rem;
+    /* font-size: 10rem; */
+    margin-top: -10rem;
+}
+
+.hero-name-heading2 {
+    font-size: 10rem;
+    margin-bottom: -4rem;
+}
+
+.hero-button {
+    /* margin-top: 3rem; */
+}
+
+/* makes everything responsive */
+
+@media only screen and (max-width: 1024px) {
+    .hero-name-heading1 {
+        font-size: 10rem;
+        margin-top: -4rem;
+    }
+
+    .hero-name-heading2 {
+        font-size: 7rem;
+        margin-bottom: -4rem;
+    }
+
+    .about-description {
+        margin-left: 10rem;
+        margin-right: 10rem;
+        margin-bottom: 0rem
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-name-heading1 {
+        font-size: 10rem;
+        margin-top: -4rem;
+    }
+
+    .hero-name-heading2 {
+        font-size: 7rem;
+        margin-bottom: -4rem;
+    }
+
+    .about-description {
+        margin-left: 10rem;
+        margin-right: 10rem;
+        margin-bottom: 0rem
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero-name-heading1 {
+        font-size: 10rem;
+        margin-top: -4rem;
+    }
+
+    .hero-name-heading2 {
+        font-size: 7rem;
+        margin-bottom: -4rem;
+    }
+
+    .about-description {
+        margin-left: 10rem;
+        margin-right: 10rem;
+        margin-bottom: 0rem
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero-name-heading1 {
+        font-size: 5rem;
+    }
+
+    .hero-name-heading2 {
+        font-size: 4rem;
+    }
 }

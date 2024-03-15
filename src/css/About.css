@@ -1,0 +1,19 @@
+.about-con {
+	display: flex;
+	height: 100vh;
+	padding: 5rem;
+}
+
+.descriptionPanel-con {
+	flex: 3; /* Adjusts width to cover 60% of the screen */
+	margin: 1rem;
+}
+
+.card-profil-desc {
+	font-size: 0.9rem;
+}
+.card-con {
+	flex: 1; /* Adjusts width to cover 20% of the screen */
+	margin: 1rem;
+	/* padding: 3rem; */
+}

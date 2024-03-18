@@ -20,14 +20,21 @@ const DescriptionPanel = ({ description }) => {
 			className={`Orbitron descriptionPanel-con text-white border p-10`}
 			style={{
 				display: "flex",
-				alignItems: "center",
-				justifyContent: "center",
+				// alignItems: "center",
+				// justifyContent: "center",
 				transition: "opacity 0.1s ease", // Adjusted the transition duration
 				opacity: isChanging ? 0 : 1, // Change opacity smoothly when content is changing
 			}}
 		>
 			{currentDescription === "" ? (
-				<p className="text-6xl text-center">Hover Button to learn</p>
+				<p className="text-6xl text-center self-center">
+					Hover Button to learn more
+				</p>
+			) : currentDescription === "cv" ? (
+				<p className="text-6xl">CV</p>
+			) : // <p className="text-6xl text-center self-center">CV</p>
+			currentDescription === "other" ? (
+				<p className="text-6xl self-center">Other Content</p>
 			) : (
 				<h1>Your Content: {currentDescription}</h1>
 			)}

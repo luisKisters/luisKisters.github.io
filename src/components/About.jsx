@@ -18,22 +18,22 @@ const About = () => {
 					<p className="px-5">Hover a button to learn more</p>
 					{/* <p>{description}</p> */}
 					<div className="card-btns pt-5 px-5">
-						<button
-							className="mb-5 text-white font-bold min-w-full border-white border-2 p-2 text-xs Orbitron hover:text-black hover:bg-white transition duration-300"
+						{/* <button
+							className="mb-5 text-white font-bold min-w-full border-white border-2 p-2 text-xs Orbitron hover:text-black hover:^white transition duration-300"
 							// onMouseEnter={() => handleHover("about")}
 							// onMouseLeave={() => setDescription("")} // Clear description on mouse leave
 							onClick={() => handleHover("about")}
 						>
 							About Me
-						</button>
-						<button
+						</button> */}
+						{/* <button
 							className="mb-5 text-white font-bold min-w-full border-white border-2 p-2 text-xs Orbitron hover:text-black hover:bg-white transition duration-300"
 							// onMouseEnter={() => handleHover("experience")}
 							// onMouseLeave={() => setDescription("")} // Clear description on mouse leave
 							onClick={() => handleHover("experience")}
 						>
 							Experience
-						</button>
+						</button> */}
 						{/* <button // make it so that if the description is set to "about" the background is white using tailwindcss
 							className="mb-5 text-white font-bold min-w-full border-white border-2 p-2 text-xs Orbitron hover:text-black hover:bg-white transition duration-300"
 							// onMouseEnter={() => handleHover("cv")}
@@ -42,8 +42,25 @@ const About = () => {
 						>
 							Download CV
 						</button> */}
+						{/* write the code for the old btns with the new effect */}
 						<button
-							className={`mb-5 text-white font-bold min-w-full border-white border-2 p-2 text-xs Orbitron hover:text-black hover:bg-white transition duration-300 ${
+							className={`mb-5 font-bold min-w-full border-white border-2 p-2 text-xs Orbitron hover:text-black hover:bg-white transition duration-300 ${
+								description === "about" ? "bg-white text-black" : ""
+							}`}
+							onClick={() => handleHover("about")}
+						>
+							About Me
+						</button>
+						<button
+							className={`mb-5 font-bold min-w-full border-white border-2 p-2 text-xs Orbitron hover:text-black hover:bg-white transition duration-300 ${
+								description === "experience" ? "bg-white text-black" : ""
+							}`}
+							onClick={() => handleHover("experience")}
+						>
+							Experience
+						</button>
+						<button
+							className={`mb-5 font-bold min-w-full border-white border-2 p-2 text-xs Orbitron hover:text-black hover:bg-white transition duration-300 ${
 								description === "cv" ? "bg-white text-black" : ""
 							}`}
 							onClick={() => handleHover("cv")}
